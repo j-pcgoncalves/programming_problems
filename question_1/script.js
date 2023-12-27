@@ -69,5 +69,3 @@ function containsCommonItem2(arr1, arr2) {
 
 // Time Complexity: O(a + b)
 // Space Complexity: O(a)
-
-console.log(containsCommonItem3(array1, array2));
