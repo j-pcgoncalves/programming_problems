@@ -34,7 +34,13 @@ function containsCommonItem(arr1, arr2) {
     return false;
 }
 
+/** Readable Brute-Force Approach */
+function containsCommonItem3(arr1, arr2) {
+    return arr1.some(item => arr2.includes(item));
+}
+
 // Time Complexity: O(a * b)
+// Space Complexity: O(1)
 
 /** 2nd Approach */
 function containsCommonItem2(arr1, arr2) {
@@ -62,3 +68,5 @@ function containsCommonItem2(arr1, arr2) {
 }
 
 // Time Complexity: O(a + b)
+
+console.log(containsCommonItem3(array1, array2));
