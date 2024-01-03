@@ -18,5 +18,3 @@ function reverse(str) {
 
 // Time Complexity: O(n)
 // Space Complexity: O(1)
-
-console.log(reverse("Hi. My name is Andrei"));
