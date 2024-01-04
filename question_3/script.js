@@ -15,6 +15,3 @@ function reverse(str) {
 
     return strArr.join("");
 }
-
-// Time Complexity: O(n)
-// Space Complexity: O(1)
