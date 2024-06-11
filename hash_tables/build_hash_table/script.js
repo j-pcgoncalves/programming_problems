@@ -3,26 +3,31 @@ class HashTable {
         this.data = new Array(size);
     }
 
+    
+    _hash(key) {
+        let hash = 0;
+        
+        for (let i = 0; i < key.length; i++) {
+            hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+        }
+        
+        return hash;
+    }
+
     set(key, value) {
         let hash = this._hash(key);
 
-        this.data[hash] = [key, value];
+        if (!this.data[hash]) {
+            this.data[hash] = [];
+        }
+        
+        this.data[hash].push([key, value]);
     }
 
     get(key) {
         let hash = this._hash(key);
 
         return this.data[hash][1];
-    }
-
-    _hash(key) {
-        let hash = 0;
-
-        for (let i = 0; i < key.length; i++) {
-            hash = (hash + key.charCodeAt(i) * i) % this.data.length;
-        }
-
-        return hash;
     }
 };
 
